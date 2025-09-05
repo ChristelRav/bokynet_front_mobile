@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/img_fond"
+    tools:context=".ProfilActivity">
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#99FFFFFF"
+        android:columnCount="2"
+        android:padding="16dp"
+        android:rowCount="3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/scrollView"
+        app:layout_constraintVertical_bias="0.995" />
+
+    <!-- SCROLL  -->
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/navbar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvCatalogue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:text="Mon profil"
+                android:textColor="#1c2a50"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+            <!-- Nom et Prenom -->
+            <TextView
+                android:id="@+id/tvNomPrenom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="16dp"
+                android:text="RAVELOMANANA  Christelle"
+                android:textColor="#333333"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <!-- Email -->
+            <TextView
+                android:id="@+id/tvEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:text="ravchris@example.com"
+                android:textColor="#555555"
+                android:textSize="16sp" />
+
+            <!-- Titre les livres téléchargés -->
+            <TextView
+                android:id="@+id/tvLabelTelecharges"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="16dp"
+                android:text="Livres téléchargés"
+                android:textColor="#1c2a50"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <!-- Ici tu peux mettre une GridLayout ou RecyclerView pour les livres -->
+            <LinearLayout
+                android:id="@+id/containerTelecharges"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp" />
+
+
+            <GridLayout
+                android:id="@+id/gridLayout6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:columnCount="2"
+                android:rowCount="3"
+                android:layout_margin="16dp"
+                android:orientation="horizontal">
+
+                <!-- Carte 1 -->
+                <LinearLayout
+                    android:id="@+id/livre6"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="0dp"
+                    android:orientation="vertical"
+                    android:clickable="true"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:gravity="center"
+                    android:elevation="4dp"
+                    android:padding="8dp">
+
+                    <ImageView
+                        android:id="@+id/imgLivre7"
+                        android:layout_width="100dp"
+                        android:layout_height="140dp"
+                        android:layout_row="0"
+                        android:layout_column="0"
+                        android:layout_margin="0dp"
+                        android:background="@drawable/cv_1"
+                        android:contentDescription="Livre 2"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/cv_3"
+                        android:clickable="true"
+                        android:focusable="true"/>
+
+                </LinearLayout>
+
+                <!-- Carte 2 -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="0dp"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:elevation="4dp"
+                    android:padding="8dp">
+
+                    <ImageView
+                        android:id="@+id/imgLivre2"
+                        android:layout_width="100dp"
+                        android:layout_height="140dp"
+                        android:layout_row="0"
+                        android:layout_column="0"
+                        android:layout_margin="0dp"
+                        android:background="@drawable/cv_1"
+                        android:contentDescription="Livre 2"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/cv_3"
+                        android:clickable="true"
+                        android:focusable="true"/>
+                </LinearLayout>
+            </GridLayout>
+
+            <GridLayout
+                android:id="@+id/gridLayout3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:columnCount="2"
+                android:rowCount="3"
+                android:layout_margin="16dp"
+                android:orientation="horizontal">
+
+                <!-- Carte 1 -->
+                <LinearLayout
+                    android:id="@+id/livre1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="0dp"
+                    android:orientation="vertical"
+                    android:clickable="true"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:gravity="center"
+                    android:elevation="4dp"
+                    android:padding="8dp">
+
+                    <ImageView
+                        android:id="@+id/imgLivre1"
+                        android:layout_width="100dp"
+                        android:layout_height="140dp"
+                        android:layout_row="0"
+                        android:layout_column="0"
+                        android:layout_margin="0dp"
+                        android:background="@drawable/cv_1"
+                        android:contentDescription="Livre 2"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/cv_3"
+                        android:clickable="true"
+                        android:focusable="true"/>
+
+                </LinearLayout>
+
+                <!-- Carte 2 -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="0dp"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:elevation="4dp"
+                    android:padding="8dp">
+
+                    <ImageView
+                        android:id="@+id/imgLivre3"
+                        android:layout_width="100dp"
+                        android:layout_height="140dp"
+                        android:layout_row="0"
+                        android:layout_column="0"
+                        android:layout_margin="0dp"
+                        android:background="@drawable/cv_1"
+                        android:contentDescription="Livre 2"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/cv_3"
+                        android:clickable="true"
+                        android:focusable="true"/>
+                </LinearLayout>
+            </GridLayout>
+
+            <!-- Titre les livres en favoris -->
+            <TextView
+                android:id="@+id/tvLabelFavoris"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="16dp"
+                android:text="Livres favoris"
+                android:textColor="#1c2a50"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <!-- Ici tu peux mettre une GridLayout ou RecyclerView pour les favoris -->
+
+            <GridLayout
+                android:id="@+id/gridLayout5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:columnCount="2"
+                android:rowCount="3"
+                android:layout_margin="16dp"
+                android:orientation="horizontal">
+
+                <!-- Carte 1 -->
+                <LinearLayout
+                    android:id="@+id/livre4"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="0dp"
+                    android:orientation="vertical"
+                    android:clickable="true"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:gravity="center"
+                    android:elevation="4dp"
+                    android:padding="8dp">
+
+                    <ImageView
+                        android:id="@+id/imgLivre5"
+                        android:layout_width="100dp"
+                        android:layout_height="140dp"
+                        android:layout_row="0"
+                        android:layout_column="0"
+                        android:layout_margin="0dp"
+                        android:background="@drawable/cv_1"
+                        android:contentDescription="Livre 2"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/cv_3"
+                        android:clickable="true"
+                        android:focusable="true"/>
+
+                </LinearLayout>
+
+                <!-- Carte 2 -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="0dp"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:elevation="4dp"
+                    android:padding="8dp">
+
+                    <ImageView
+                        android:id="@+id/imgLivre4"
+                        android:layout_width="100dp"
+                        android:layout_height="140dp"
+                        android:layout_row="0"
+                        android:layout_column="0"
+                        android:layout_margin="0dp"
+                        android:background="@drawable/cv_1"
+                        android:contentDescription="Livre 2"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/cv_3"
+                        android:clickable="true"
+                        android:focusable="true"/>
+                </LinearLayout>
+            </GridLayout>
+
+
+
+
+
+        </LinearLayout>
+
+    </ScrollView>
+    <!-- SCROLL -->
+
+    <include
+        layout="@layout/navbar"
+        android:id="@+id/navbar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/img_fond"
+    tools:context=".CatalogueActivity">
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#99FFFFFF"
+        android:columnCount="2"
+        android:padding="16dp"
+        android:rowCount="3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/scrollView"
+        app:layout_constraintVertical_bias="0.995" />
+
+    <!-- SCROLL  -->
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/navbar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvCatalogue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:text="Catalogue des livres"
+                android:textColor="#1c2a50"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+
+            <!-- GRID Livres 1 -->
+            <GridLayout
+                android:id="@+id/gridLivres"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:columnCount="3"
+                android:orientation="horizontal"
+                android:useDefaultMargins="true">
+
+                <!-- Tes ImageView de livres ici -->
+                <ImageView
+                    android:id="@+id/imgLivre1"
+                    android:layout_width="100dp"
+                    android:layout_height="140dp"
+                    android:layout_row="0"
+                    android:layout_column="0"
+                    android:layout_margin="15dp"
+                    android:background="@drawable/cv_1"
+                    android:contentDescription="Livre 2"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/cv_3" />
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="140dp"
+                    android:layout_row="0"
+                    android:layout_column="1"
+                    android:layout_margin="15dp"
+                    android:background="@drawable/cv_1"
+                    android:contentDescription="Livre 1"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/cv_3" />
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="140dp"
+                    android:layout_row="0"
+                    android:layout_column="2"
+                    android:layout_margin="15dp"
+                    android:background="@drawable/cv_1"
+                    android:contentDescription="Livre 1"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/cv_3" />
+            </GridLayout>
+
+            <!-- GRID Livres 2 -->
+            <GridLayout
+                android:id="@+id/gridLivres2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:columnCount="3"
+                android:orientation="horizontal"
+                android:useDefaultMargins="true">
+
+                <!-- Tes ImageView de livres ici -->
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="140dp"
+                    android:layout_row="0"
+                    android:layout_column="0"
+                    android:layout_margin="15dp"
+                    android:background="@drawable/cv_1"
+                    android:contentDescription="Livre 4"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/cv_3" />
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="140dp"
+                    android:layout_row="0"
+                    android:layout_column="1"
+                    android:layout_margin="15dp"
+                    android:background="@drawable/cv_1"
+                    android:contentDescription="Livre 5"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/cv_3" />
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="140dp"
+                    android:layout_row="0"
+                    android:layout_column="2"
+                    android:layout_margin="15dp"
+                    android:background="@drawable/cv_1"
+                    android:contentDescription="Livre 6"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/cv_3" />
+            </GridLayout>
+
+            <!-- GRID Livres 3 -->
+            <GridLayout
+                android:id="@+id/gridLivres3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:columnCount="3"
+                android:orientation="horizontal"
+                android:useDefaultMargins="true">
+
+                <!-- Tes ImageView de livres ici -->
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="140dp"
+                    android:layout_row="0"
+                    android:layout_column="0"
+                    android:layout_margin="15dp"
+                    android:background="@drawable/cv_1"
+                    android:contentDescription="Livre 4"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/cv_3" />
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="140dp"
+                    android:layout_row="0"
+                    android:layout_column="1"
+                    android:layout_margin="15dp"
+                    android:background="@drawable/cv_1"
+                    android:contentDescription="Livre 5"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/cv_3" />
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="140dp"
+                    android:layout_row="0"
+                    android:layout_column="2"
+                    android:layout_margin="15dp"
+                    android:background="@drawable/cv_1"
+                    android:contentDescription="Livre 6"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/cv_3" />
+
+            </GridLayout>
+
+
+            <!-- GRID Livres 4 -->
+            <GridLayout
+                android:id="@+id/gridLivres4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:columnCount="3"
+                android:orientation="horizontal"
+                android:useDefaultMargins="true">
+
+
+                <!-- Tes ImageView de livres ici -->
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="140dp"
+                    android:layout_row="0"
+                    android:layout_column="0"
+                    android:layout_margin="15dp"
+                    android:background="@drawable/cv_1"
+                    android:contentDescription="Livre 4"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/cv_3" />
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="140dp"
+                    android:layout_row="0"
+                    android:layout_column="1"
+                    android:layout_margin="15dp"
+                    android:background="@drawable/cv_1"
+                    android:contentDescription="Livre 5"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/cv_3" />
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="140dp"
+                    android:layout_row="0"
+                    android:layout_column="2"
+                    android:layout_margin="15dp"
+                    android:background="@drawable/cv_1"
+                    android:contentDescription="Livre 6"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/cv_3" />
+            </GridLayout>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+    <!-- SCROLL -->
+
+    <include
+        layout="@layout/navbar"
+        android:id="@+id/navbar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
