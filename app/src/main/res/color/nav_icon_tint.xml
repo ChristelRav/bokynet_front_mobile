@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Bouton sélectionné -->
+    <item android:color="#FFFFFF" android:state_selected="true"/>
+    <!-- Bouton pressé -->
+    <item android:color="#FFFFFF" android:state_pressed="true"/>
+    <!-- Par défaut -->
+    <item android:color="#1c2a50"/>
+</selector>
