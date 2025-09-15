@@ -1,5 +1,6 @@
 package com.example.bokynet_front_mobile
 
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.text.Html
@@ -17,11 +18,12 @@ import retrofit2.Callback
 import retrofit2.Response
 
 class LoginActivity : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
 
-        // lien vers inscription
+        // Lien vers inscription
         val tvInscription = findViewById<TextView>(R.id.tvInscription)
         val text = "Première visite ? <font color='#0000FF'><a href='signup'>S'inscrire au registre des lecteurs</a></font>"
         tvInscription.text = Html.fromHtml(text)
@@ -30,7 +32,7 @@ class LoginActivity : AppCompatActivity() {
             startActivity(Intent(this, SignInActivity::class.java))
         }
 
-        // Traitement connexion
+        // Bouton connexion
         val btnConnexion = findViewById<Button>(R.id.btnconnexion)
         btnConnexion.setOnClickListener {
             val username = findViewById<TextInputEditText>(R.id.iptmail).text.toString()
@@ -44,20 +46,14 @@ class LoginActivity : AppCompatActivity() {
                         if (response.isSuccessful) {
                             val accessToken = response.body()?.access
                             val refreshToken = response.body()?.refresh
-
-                            val sharedPref = getSharedPreferences("auth_prefs", MODE_PRIVATE)
-                            with(sharedPref.edit()) {
-                                putString("access_token", accessToken)
-                                putString("refresh_token", refreshToken)
-                                apply()
+                            if (accessToken != null && refreshToken != null) {
+                                saveTokens(accessToken, refreshToken, this@LoginActivity)
+                                Toast.makeText(this@LoginActivity, "Connexion réussie !", Toast.LENGTH_SHORT).show()
+                                startActivity(Intent(this@LoginActivity, AccueilActivity::class.java))
+                                finish()
+                            } else {
+                                Toast.makeText(this@LoginActivity, "Erreur: tokens manquants", Toast.LENGTH_SHORT).show()
                             }
-                            Toast.makeText(this@LoginActivity, "Access: ${accessToken ?: "null"}", Toast.LENGTH_LONG).show()
-                            Toast.makeText(this@LoginActivity, "Refresh: ${refreshToken ?: "null"}", Toast.LENGTH_LONG).show()
-
-                            Toast.makeText(this@LoginActivity, "Connexion réussie !", Toast.LENGTH_SHORT).show()
-
-                            startActivity(Intent(this@LoginActivity, AccueilActivity::class.java))
-                            finish()
                         } else {
                             Toast.makeText(this@LoginActivity, "Erreur: ${response.code()}", Toast.LENGTH_SHORT).show()
                         }
@@ -67,6 +63,15 @@ class LoginActivity : AppCompatActivity() {
                         Toast.makeText(this@LoginActivity, "Échec de connexion : ${t.message}", Toast.LENGTH_SHORT).show()
                     }
                 })
+        }
+    }
+
+    private fun saveTokens(access: String, refresh: String, context: Context) {
+        val sharedPref = context.getSharedPreferences("auth_prefs", Context.MODE_PRIVATE)
+        with(sharedPref.edit()) {
+            putString("access_token", access)
+            putString("refresh_token", refresh)
+            apply()
         }
     }
 }

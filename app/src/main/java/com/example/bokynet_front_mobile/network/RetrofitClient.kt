@@ -6,11 +6,14 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
 object RetrofitClient {
-    //private const val BASE_URL = "http://10.0.2.2:8000/"
+
+    // Base URL de ton API Django
     private const val BASE_URL = "http://192.168.88.11:8000/"
+
+    // Retourne l'instance ApiService avec AuthInterceptor pour gérer access & refresh token
     fun getInstance(context: Context): ApiService {
         val client = OkHttpClient.Builder()
-            .addInterceptor(AuthInterceptor(context))
+            .addInterceptor(AuthInterceptor(context)) // Gestion automatique du token
             .build()
 
         val retrofit = Retrofit.Builder()

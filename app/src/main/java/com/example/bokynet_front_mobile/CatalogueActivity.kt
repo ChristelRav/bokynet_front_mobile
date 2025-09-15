@@ -101,6 +101,7 @@ class CatalogueActivity : AppCompatActivity() {
                     putExtra("categorie", livre.categorie.categorie)
                     putExtra("couverture", livre.couverture)
                     putExtra("resume", livre.resume)
+                    putExtra("fichier", livre.fichier)
                 }
                 startActivity(intent)
             }

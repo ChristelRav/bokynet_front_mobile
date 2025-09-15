@@ -48,11 +48,6 @@
                 android:textSize="25sp"
                 android:textStyle="bold" />
 
-            <!-- image centré de la couverture du livre  -->
-            <!-- en dessous titre du livre en GRAS -->
-            <!-- en dessous Nom Auteur -->
-            <!-- en dessous Titre Synopsis -->
-            <!-- en dessous Le texte de synopsis -->
 
             <ImageView
                 android:id="@+id/imgCouverture"
@@ -85,6 +80,40 @@
                 android:textSize="16sp"
                 android:gravity="center" />
 
+            <!-- FAVORIS & LECTURE  -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="24dp"
+                android:orientation="horizontal">
+
+                <!-- Bouton Lire PDF -->
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/btnLirePdf"
+                    android:layout_width="72dp"
+                    android:layout_height="55dp"
+                    android:layout_marginEnd="24dp"
+                    android:contentDescription="Lire le PDF"
+                    app:srcCompat="@drawable/outline_book_5_24"
+                    app:tint="#00FF62"
+                    app:backgroundTint="#CCFFFFFF" />
+
+
+                <!-- Bouton bookmark -->
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/btnLirePdfJaune"
+                    android:layout_width="72dp"
+                    android:layout_height="55dp"
+                    android:layout_marginStart="150dp"
+                    android:contentDescription="Autre action"
+                    app:srcCompat="@drawable/outline_bookmark_star_24"
+                    app:tint="#FFD600"
+                    app:backgroundTint="#CCFFFFFF"/>
+
+            </LinearLayout>
+
+
             <TextView
                 android:id="@+id/tvLabelSynopsis"
                 android:layout_width="match_parent"
@@ -107,7 +136,6 @@
                 android:textColor="#333333"
                 android:textSize="15sp"
                 android:lineSpacingExtra="2dp" />
-
 
         </LinearLayout>
 

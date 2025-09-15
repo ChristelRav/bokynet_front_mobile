@@ -6,7 +6,8 @@ data class LivreSimplifie(
     val auteur: AuteurSimplifie,
     val categorie: CategorieSimplifie,
     val couverture: String,
-    val resume: String
+    val resume: String,
+    val fichier: String
 )
 
 data class AuteurSimplifie(

@@ -5,6 +5,7 @@ import android.content.Context
 import android.widget.ImageButton
 import com.example.bokynet_front_mobile.AccueilActivity
 import com.example.bokynet_front_mobile.CatalogueActivity
+import com.example.bokynet_front_mobile.ProfilActivity
 import com.example.bokynet_front_mobile.SearchActivity
 
 class NavbarHelper(
@@ -28,6 +29,10 @@ class NavbarHelper(
         btnListeLivres.setOnClickListener {
             selectButton(btnListeLivres)
             context.startActivity(Intent(context, CatalogueActivity::class.java))
+        }
+        btnMonEspace.setOnClickListener {
+            selectButton(btnMonEspace)
+            context.startActivity(Intent(context, ProfilActivity::class.java))
         }
     }
 

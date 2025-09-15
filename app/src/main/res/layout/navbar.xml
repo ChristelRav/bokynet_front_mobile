@@ -58,6 +58,18 @@
             android:contentDescription="Mon espace"
             app:tint="@color/nav_icon_tint"
             app:srcCompat="@drawable/baseline_person_24" />
+
+
+        <ImageButton
+            android:id="@+id/btnDisconnect"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Déconnexion"
+            app:tint="@color/nav_icon_tint"
+            app:srcCompat="@drawable/baseline_power_settings_new_24" />
+
     </LinearLayout>
     <!-- NAVBAR  -->
 
