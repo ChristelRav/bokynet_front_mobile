@@ -8,7 +8,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 object RetrofitClient {
 
     // Base URL de ton API Django
-    private const val BASE_URL = "http://192.168.88.11:8000/"
+    private const val BASE_URL = "http://192.168.43.143:8000/"
 
     // Retourne l'instance ApiService avec AuthInterceptor pour gérer access & refresh token
     fun getInstance(context: Context): ApiService {

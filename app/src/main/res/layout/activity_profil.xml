@@ -97,7 +97,7 @@
                         android:background="@drawable/cv_3"
                         android:contentDescription="Livre 2"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/cv_3"
+                        android:src="@drawable/roman_1984"
                         android:clickable="true"
                         android:focusable="true"/>
 
@@ -114,19 +114,7 @@
                     android:elevation="4dp"
                     android:padding="8dp">
 
-                    <ImageView
-                        android:id="@+id/imgLivre4"
-                        android:layout_width="100dp"
-                        android:layout_height="140dp"
-                        android:layout_row="0"
-                        android:layout_column="0"
-                        android:layout_margin="0dp"
-                        android:background="@drawable/cv_3"
-                        android:contentDescription="Livre 2"
-                        android:scaleType="centerCrop"
-                        android:src="@drawable/cv_3"
-                        android:clickable="true"
-                        android:focusable="true"/>
+
                 </LinearLayout>
             </GridLayout>
 

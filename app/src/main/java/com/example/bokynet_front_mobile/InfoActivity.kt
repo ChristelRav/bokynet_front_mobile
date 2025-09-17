@@ -71,6 +71,27 @@ class InfoActivity : AppCompatActivity() {
             intent.putExtra("fichier", fichier)
             startActivity(intent)
         }
+        // Dowload PDF
+        val btnDownload = findViewById<FloatingActionButton>(R.id.btnDownload)
+        btnDownload.setOnClickListener {
+
+            val fichier = intent.getStringExtra("fichier") ?: "defaut.pdf"
+
+            // Destination : dossier Téléchargements public
+            val downloadsDir = getExternalFilesDir(null)  // Remplace par Environment.DIRECTORY_DOWNLOADS pour Téléchargements public
+            val destFile = File(downloadsDir, fichier)
+
+            if (!destFile.exists()) {
+                assets.open(fichier).use { input ->
+                    FileOutputStream(destFile).use { output ->
+                        input.copyTo(output)
+                    }
+                }
+            }
+
+            Toast.makeText(this, "Fichier enregistré ", Toast.LENGTH_LONG).show()
+        }
+
 
         // Ajout Favoris
         val livreId = intent.getIntExtra("idlivre", -1)

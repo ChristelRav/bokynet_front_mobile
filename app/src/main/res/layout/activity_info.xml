@@ -99,13 +99,26 @@
                     app:tint="#00FF62"
                     app:backgroundTint="#CCFFFFFF" />
 
+                <!-- Bouton Télécharger (au milieu) -->
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/btnDownload"
+                    android:layout_width="72dp"
+                    android:layout_height="55dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:contentDescription="Télécharger PDF"
+                    app:srcCompat="@drawable/rounded_download_24"
+                    app:tint="#000000"
+                    app:backgroundTint="#CCFFFFFF"
+                    app:elevation="8dp" />
+
 
                 <!-- Bouton bookmark -->
                 <com.google.android.material.floatingactionbutton.FloatingActionButton
                     android:id="@+id/btnLirePdfJaune"
                     android:layout_width="72dp"
                     android:layout_height="55dp"
-                    android:layout_marginStart="150dp"
+                    android:layout_marginStart="16dp"
                     android:contentDescription="Autre action"
                     app:srcCompat="@drawable/outline_bookmark_star_24"
                     app:tint="#FFD600"

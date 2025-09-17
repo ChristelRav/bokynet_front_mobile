@@ -31,6 +31,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:backgroundTint="@android:color/white"
+            android:textColor="#1c2a50"
             android:text="Précédent" />
 
         <Button
@@ -39,6 +40,7 @@
             android:layout_height="wrap_content"
             android:backgroundTint="@android:color/white"
             android:text="Suivant"
+            android:textColor="#1c2a50"
             android:layout_marginStart="16dp"/>
     </LinearLayout>
 
