@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <!-- NAVBAR  -->
+    <LinearLayout
+        android:id="@+id/navbar"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:orientation="horizontal"
+        android:background="#528ac5"
+        android:padding="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageButton
+            android:id="@+id/btnAccueil"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Accueil"
+            app:tint="@color/nav_icon_tint"
+            app:srcCompat="@drawable/baseline_home_24" />
+
+        <ImageButton
+            android:id="@+id/btnRecherche"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Recherche"
+            app:tint="@color/nav_icon_tint"
+            app:srcCompat="@drawable/baseline_search_24" />
+
+        <ImageButton
+            android:id="@+id/btnListeLivres"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Liste des livres"
+            app:tint="@color/nav_icon_tint"
+            app:srcCompat="@drawable/baseline_menu_book_24" />
+
+        <ImageButton
+            android:id="@+id/btnMonEspace"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Mon espace"
+            app:tint="@color/nav_icon_tint"
+            app:srcCompat="@drawable/baseline_person_24" />
+
+
+        <ImageButton
+            android:id="@+id/btnDisconnect"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Déconnexion"
+            app:tint="@color/nav_icon_tint"
+            app:srcCompat="@drawable/baseline_power_settings_new_24" />
+
+    </LinearLayout>
+    <!-- NAVBAR  -->
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
